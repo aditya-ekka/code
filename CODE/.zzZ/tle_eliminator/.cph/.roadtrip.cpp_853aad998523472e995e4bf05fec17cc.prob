@@ -1,0 +1,1 @@
+{"name":"Local: roadtrip","url":"/home/adie/CODE/tle_eliminator/roadtrip.cpp","tests":[{"id":1755919185361,"input":"3\n3 7\n1 2 5\n3 6\n1 2 5\n1 10\n7\n","output":"4\n3\n7\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/CODE/tle_eliminator/roadtrip.cpp","group":"local","local":true}

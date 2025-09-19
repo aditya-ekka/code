@@ -1,0 +1,1 @@
+{"name":"Local: coverInWater","url":"/home/adie/CODE/tle_eliminator/coverInWater.cpp","tests":[{"id":1755923769777,"input":"5\n3\n...\n7\n##....#\n7\n..#.#..\n4\n####\n10\n#...#..#.#\n","output":"2\n2\n5\n0\n2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/CODE/tle_eliminator/coverInWater.cpp","group":"local","local":true}
