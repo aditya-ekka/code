@@ -3,7 +3,7 @@
 #define frr(i,nomberi) for(int i=1;i<=nomber;i++)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"No\n"
+#define no cout<<"NO\n"
 #define r0 return 0;
 #define r1 return 1;
 #define printv(vexhtar) fr(vexhtar.size()){cout<<vexhtar[i]<<" ";}
@@ -18,10 +18,20 @@ int main(){
     int test;
     cin>>test;
     while(test--){
-        int n;
-        cin>>n;
+        int n,k;
+        cin>>n>>k;
         ll arr[n];
         fr(i,n) cin>>arr[i];
+bool y=0;
+        fr(i,n){
+            if(k==arr[i]){
+                yes;y=1;
+                break;
+            }
+        }
+        if(y==0){
+            no;
+        }
         
         //solve(n,arr);
         
