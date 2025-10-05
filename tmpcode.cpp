@@ -14,35 +14,12 @@
 using namespace std;
 
 void solve(){
-    int n=4;
-    ll arr[n]={1261,227821, 143, 4171, 1941};
-    //
-    sort(arr,arr+n);
 
-    bool good=true;
-    frr(idx,n-1){
-        ll hcf=arr[0]; 
-        frr(i,idx){
-            hcf=gcd(hcf,arr[0]);
-            cout<<"i "<<i<<"\nhcf "<<hcf<<"\narr[i] "<<arr[i]<<endl; //
-        }
-        if (hcf > idx+1){
-            good=false;
-            break;
-        }
-    }
-
-    if(good){
-        cout<<"Yes\n";
-    }else{
-        cout<<"No\n";
-    }
 }
 
 int main(){
     int test=1;
-    while(test--){
-        solve();
-    }
-    return 0;
+    // while(test--){ solve(); }
+    string s="hella";
+    cout<<int(s[4]) - 97;
 }

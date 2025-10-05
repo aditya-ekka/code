@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 #define fr(i,n) for(int i=0;i<n;i++)
 #define fR(i,n) for(int i=n-1;i>=0;i--)
 #define frr(i,n) for(int i=1;i<=n;i++)
@@ -13,21 +10,37 @@ using namespace std;
 #define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
 #define printvv(_v) fr(i,_v.size()){fr(j,_v[1].size()){cout<<_v[i]}}
 //Eww...macros!
+#include<bits/stdc++.h>
+using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    vector<int> arr;
-    fr(i,n) cin>>arr[i];
+    int n,k;
+    cin>>n>>k;
+    string s; cin>>s;
     //
-    int min_gcd=arr[0];
-    frr(i,n-1){
-        min_gcd=gcd(min_gcd,arr[i]);
+
+    int paired=0;
+    vector<int> hash (26,0);
+    fr(i,n){
+        int index = int(s[i]) - 97;
+        if(hash[index]){
+            paired ++ ;
+            hash[index]=0;
+        }else{
+            hash[index]=1;
+        }
     }
 
-    if(min_gcd<=2) yes;
-    else no;
+    int solo=0;
+    fr(i,26){
+        if(hash[i]) solo++;
+    }
 
+    if(k<solo-1){
+        no;
+    }else{
+         
+    }
 }
 
 int main(){

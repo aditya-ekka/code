@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 #define fr(i,n) for(int i=0;i<n;i++)
 #define fR(i,n) for(int i=n-1;i>=0;i--)
 #define frr(i,n) for(int i=1;i<=n;i++)
@@ -13,28 +10,39 @@ using namespace std;
 #define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
 #define printvv(_v) fr(i,_v.size()){fr(j,_v[1].size()){cout<<_v[i]}}
 //Eww...macros!
+#include<bits/stdc++.h>
+using namespace std;
 
 void solve(){
     int n;
     cin>>n;
-    vector<int> arr;
+    ll arr[n];
     fr(i,n) cin>>arr[i];
     //
-    int min_gcd=arr[0];
-    frr(i,n-1){
-        min_gcd=gcd(min_gcd,arr[i]);
-    }
+    
+    ll xarr=arr[0];
+    frr(i,n-1)  xarr=xarr^arr[i];
 
-    if(min_gcd<=2) yes;
-    else no;
+    if(n%2==0){
+        // xarr^0 = 0    xor(x...)=0
+        if(xarr==0){
+            cout<<0<<endl; //print anything
+        }else{
+            cout<<-1<<endl;
+        }
+    }else{
+        // xarr^x = 0    xor(x...)=x
+        cout<<xarr<<endl;
+    }
 
 }
 
 int main(){
     int test;
     cin>>test;
-    while(test--){
-        solve();
-    }
+    while(test--)   { solve(); }
     return 0;
 }
+
+// x^x.. even times = 0
+// x^x.. odd times = x
