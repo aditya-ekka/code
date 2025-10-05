@@ -14,11 +14,14 @@
 using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    ll n,k; ll x;
+    cin>>n>>k; cin>>x;
     //
+    if(x<=(n*(n+1))/2 && x>=(k*(k+1))/2){
+        yes;
+    }else{
+        no;
+    }
 }
 
 int main(){

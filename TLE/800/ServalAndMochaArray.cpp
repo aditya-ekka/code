@@ -17,12 +17,14 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    vector<int> arr;
+    vector<int> arr(n);
     fr(i,n) cin>>arr[i];
     //
-    int min_gcd=arr[0];
-    frr(i,n-1){
-        min_gcd=gcd(min_gcd,arr[i]);
+    int min_gcd=INT_MAX;
+    fr(i,n){
+        fr(j,n){
+            if(i!=j)    min_gcd=min(min_gcd, gcd(arr[i],arr[j]));
+        }
     }
 
     if(min_gcd<=2) yes;
