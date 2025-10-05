@@ -19,6 +19,27 @@ void solve(){
     ll arr[n];
     fr(i,n) cin>>arr[i];
     //
+    sort(arr,arr+n,greater<ll>());
+    int duplicate=0;
+    frr(i,n-1){
+        if(arr[0]==arr[i]) duplicate++;
+    }
+    if(duplicate==n-1){
+        no;
+    }else if(duplicate){
+        yes;
+        for(int i=duplicate;i<n;i++){
+            cout<<arr[i]<<" ";
+        }
+        fr(i,duplicate){
+            cout<<arr[0]<<" ";
+        }
+        cout<<endl;
+    }else{
+        yes;
+        fr(i,n) cout<<arr[i]<<" ";
+        cout<<endl;
+    }
 }
 
 int main(){

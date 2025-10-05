@@ -16,9 +16,30 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    vector<ll> iarr;
+    fr(i,n) cin>>iarr[i];
     //
+    vector<ll>arr(iarr);
+    // sort(arr.begin(),arr.end());
+
+    bool good=true;
+
+    ll x,y;
+    ll min_gcd=arr[0];
+    fr(i,n){
+        min_gcd=
+    }
+
+    frr(i,n-1){
+        ll a,b;
+        ll min_gcd=arr[i];
+    }
+
+    if(good){
+        cout<<"Yes\n";
+    }else{
+        cout<<"No\n";
+    }
 }
 
 int main(){

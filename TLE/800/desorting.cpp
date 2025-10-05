@@ -1,10 +1,8 @@
 #define fr(i,n) for(int i=0;i<n;i++)
-#define fR(i,n) for(int i=n-1;i>=0;i--)
-#define frr(i,n) for(int i=1;i<=n;i++)
-#define fRR(i,n) for(int i=n;i>=1;i--)
+#define frr(i,n) for(int i=1;i<=n;i+)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"NO\n"
+#define no cout<<"No\n"
 #define r0 return 0;
 #define r1 return 1;
 #define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
@@ -19,6 +17,15 @@ void solve(){
     ll arr[n];
     fr(i,n) cin>>arr[i];
     //
+    ll mdiff=LLONG_MAX;
+    fr(i,n-1){
+        mdiff=min(arr[i+1] - arr[i] , mdiff);
+        if(mdiff<0){
+            cout<<0<<endl;
+            return;
+        }
+    }
+    cout<<mdiff/2 + 1<<endl;
 }
 
 int main(){

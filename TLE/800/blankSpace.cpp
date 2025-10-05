@@ -4,7 +4,7 @@
 #define fRR(i,n) for(int i=n;i>=1;i--)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"NO\n"
+#define no cout<<"No\n"
 #define r0 return 0;
 #define r1 return 1;
 #define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
@@ -18,7 +18,18 @@ void solve(){
     cin>>n;
     ll arr[n];
     fr(i,n) cin>>arr[i];
-    //
+    int space=0;
+    int tmp=0;
+    fr(i,n){
+        if(arr[i]==0){
+            tmp++;
+        }else{
+            space=max(tmp,space);
+            tmp=0;
+        }
+    }
+    space=max(tmp,space);
+    cout<<space<<endl;
 }
 
 int main(){

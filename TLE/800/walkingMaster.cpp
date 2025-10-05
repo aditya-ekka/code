@@ -14,10 +14,20 @@
 using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    ll x,y;
+    ll a,b,c,d;
+    cin>>a>>b>>c>>d;
+    x=c-a; y=d-b;
+    if(y>=0){
+        if(x>y){
+            cout<<-1<<endl;
+        }else{
+            cout<< y+(y-x) <<endl;
+        }
+    }else{
+        cout<<-1<<endl;
+    }
+
     //
 }
 

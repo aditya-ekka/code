@@ -14,11 +14,10 @@
 using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
-    //
+    string n; cin>>n;
+    int ln=n.size();
+    int msb=n[0]-'0';
+    cout<< (ln-1)*9 + msb <<endl;
 }
 
 int main(){

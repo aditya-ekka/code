@@ -14,11 +14,13 @@
 using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
-    //
+    int n,a,b;
+    cin>>n>>a>>b;
+    if(a+b <= n-2) yes;
+    else{
+        if(a==n && b==n) yes;
+        else no;
+    }
 }
 
 int main(){

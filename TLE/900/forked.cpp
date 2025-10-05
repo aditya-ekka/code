@@ -1,60 +1,75 @@
-#include<bits/stdc++.h>
-using namespace std;
-//Eww...macros!
 #define fr(i,n) for(int i=0;i<n;i++)
+#define fR(i,n) for(int i=n-1;i>=0;i--)
 #define frr(i,n) for(int i=1;i<=n;i++)
+#define fRR(i,n) for(int i=n;i>=1;i--)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"No\n"
+#define no cout<<"NO\n"
 #define r0 return 0;
 #define r1 return 1;
+#define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
+#define printvv(_v) fr(i,_v.size()){fr(j,_v[1].size()){cout<<_v[i]}}
+//Eww...macros!
+#include<bits/stdc++.h>
+using namespace std;
 
-void solve(int n, ll arr){
-    //
+void solve(){
+    ll a,b; cin>>a>>b;
+    ll kx,ky; cin>>kx>>ky;
+    ll qx,qy; cin>>qx>>qy;
+    
+    vector< pair<ll,ll> > king (8,{kx,ky});
+    vector< pair<ll,ll> > queen (8,{qx,qy});
+
+king[0].first +=a; king[0].second +=b;
+king[1].first +=a; king[1].second -=b;
+king[2].first -=a; king[2].second +=b;
+king[3].first -=a; king[3].second -=b;
+king[4].first +=b; king[4].second +=a;
+king[5].first +=b; king[5].second -=a;
+king[6].first -=b; king[6].second +=a;
+king[7].first -=b; king[7].second -=a;
+
+queen[0].first +=a; queen[0].second +=b;
+queen[1].first +=a; queen[1].second -=b;
+queen[2].first -=a; queen[2].second +=b;
+queen[3].first -=a; queen[3].second -=b;
+queen[4].first +=b; queen[4].second +=a;
+queen[5].first +=b; queen[5].second -=a;
+queen[6].first -=b; queen[6].second +=a;
+queen[7].first -=b; queen[7].second -=a;
+
+   int count=0;
+
+   if(a==b){
+        fr(i,4){
+            fr(j,4){
+                if(king[i].first == queen[j].first &&
+                king[i].second == queen[j].second){
+                    count ++ ;
+                }
+            }
+        }
+   }else{
+        fr(i,8){
+            fr(j,8){
+                if(king[i].first == queen[j].first &&
+                king[i].second == queen[j].second){
+                    count ++ ;
+                }
+            }
+        }
+   }
+
+   cout<<count<<endl;
+
 }
+
 int main(){
     int test;
     cin>>test;
     while(test--){
-        int x,y,qx,qy,kx,ky;
-        cin>>x>>y>>kx>>ky>>qx>>qy;
-        
-        //solve(n,arr);
-        vector<vector<int>>king={{kx+x,ky+y},{kx+x,ky-y},{kx-x,ky+y},{kx-x,ky-y},
-    {kx+y,ky+x},{kx+y,ky-x},{kx-y,ky+x},{kx-y,ky-x}};
-        vector<vector<int>>queen={{qx+x,qy+y},{qx+x,qy-y},{qx-x,qy+y},{qx-x,qy-y},
-    {qx+y,qy+x},{qx+y,ky-x},{qx-y,qy+x},{qx-y,qy-x}};
-
-        // fr(i,4){
-        //     string bin=bitset<2>(i).to_string();
-        //     if((int)bin[0]){
-        //         king[i][0]+=x;
-        //         queen[i][0]+=x;
-        //     }else{
-        //         king[i][0]-=x;
-        //         queen[i][0]-=x;
-        //     }
-        //     if((int)bin[1]){
-        //         king[i][1]+=x;
-        //         queen[i][1]+=x;
-        //     }else{
-        //         king[i][1]-=x;
-        //         queen[i][1]-=x;
-        //     }
-        // }
-// fr(i,8){fr(j,2){cout<<king[i][j]<<" ";cout<<queen[i][j]<<" ";}cout<<endl;}
-
-        int ans=0;
-        fr(i,8){
-            fr(j,8){
-                if(king[i][0]==queen[j][0] && king[i][1]==queen[j][1]){
-                    ans++;
-                }
-            }
-        }
-        
-        cout<<ans<<endl;
-        
+        solve();
     }
     return 0;
 }

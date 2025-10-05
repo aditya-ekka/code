@@ -4,7 +4,7 @@
 #define fRR(i,n) for(int i=n;i>=1;i--)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"NO\n"
+#define no cout<<"No\n"
 #define r0 return 0;
 #define r1 return 1;
 #define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
@@ -16,9 +16,28 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    ll sum=0,pro=1;
+    fr(i,n){
+        int a;
+        cin>>a;
+        sum+=a;
+        pro*=a;
+    }
     //
+    if(sum<0){
+        sum*=-1;
+        sum=(sum+1)/2 ; //no of flips to make sum>=0
+        if (sum%2)  pro*=-1;
+        if(pro==1){
+            cout<<sum<<endl;
+        }else{
+            cout<<sum+1<<endl;
+        }
+
+    }else{
+        if(pro==1)  cout<<0<<endl;
+        else        cout<<1<<endl;
+    }
 }
 
 int main(){

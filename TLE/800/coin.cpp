@@ -1,3 +1,4 @@
+//coins
 #define fr(i,n) for(int i=0;i<n;i++)
 #define fR(i,n) for(int i=n-1;i>=0;i--)
 #define frr(i,n) for(int i=1;i<=n;i++)
@@ -14,11 +15,23 @@
 using namespace std;
 
 void solve(){
-    int n;
-    cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    ll int n,k;
+    cin>>n>>k;
     //
+    if(n%2==0){
+        yes;
+    }else{
+        if(k%2==0){
+            no;
+        }else{
+            //code
+            if(n>=k){
+                yes;
+            }else{
+                no;
+            }
+        }
+    }
 }
 
 int main(){

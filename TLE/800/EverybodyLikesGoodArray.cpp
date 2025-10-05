@@ -19,6 +19,16 @@ void solve(){
     ll arr[n];
     fr(i,n) cin>>arr[i];
     //
+    int cnt=0;
+    bool pairity=arr[0]%2; //true for even
+    frr(i,n-1){
+        if(arr[i]%2 == pairity){
+            cnt++;
+        }else{
+            pairity=1-pairity;
+        }
+    }
+    cout<<cnt<<endl;
 }
 
 int main(){

@@ -16,9 +16,27 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    int arr[n];
+    int count_2=0;
+    fr(i,n) {
+        cin>>arr[i];
+        if(arr[i]==2) count_2 ++;}
     //
+
+    if(count_2%2==0){
+        int loop=count_2 / 2;
+        fr(i,n){
+            if(arr[i]==2){
+                loop--;
+            }
+            if(loop==0){
+                cout<<i+1<<endl;
+                return;
+            }
+        }
+    }else{
+        cout<<-1<<endl;
+    }
 }
 
 int main(){

@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "bitset": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp"
     }
 }

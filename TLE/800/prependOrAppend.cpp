@@ -16,9 +16,18 @@ using namespace std;
 void solve(){
     int n;
     cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    string s;
+    cin>>s;
     //
+    int append_count=0;
+    fr(i,n/2){
+        if(s[i]!=s[n-i-1]){
+            append_count ++ ;
+        }else{
+            break;
+        }
+    }
+    cout<< n - append_count*2 <<endl;
 }
 
 int main(){
