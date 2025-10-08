@@ -14,15 +14,15 @@
 using namespace std;
 
 void solve(){
-    ll n,k; ll x;
-    cin>>n>>k; cin>>x;
+    ll a,b; int n;
+    cin >> a >> b ; cin>>n;
+    ll arr[n];
+    fr(i,n) cin>>arr[i];
     //
-    if(x<=(((n*(n+1))/2)-(((n-k)*((n-k)+1))/2)) &&
-    x>=(k*(k+1))/2){
-        yes;
-    }else{
-        no;
-    }
+    ll sum=b;
+    fr(i,n) sum+=min(a-1,arr[i]);
+    cout << sum << endl;
+
 }
 
 int main(){

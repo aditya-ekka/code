@@ -17,7 +17,8 @@ void solve(){
     ll n,k; ll x;
     cin>>n>>k; cin>>x;
     //
-    if(x<=(n*(n+1))/2 && x>=(k*(k+1))/2){
+    if(x<=(((n*(n+1))/2)-(((n-k)*((n-k)+1))/2)) &&
+    x>=(k*(k+1))/2){
         yes;
     }else{
         no;
