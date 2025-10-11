@@ -23,8 +23,7 @@ void solve(){
         cout<<2<<endl;
         fr(i,2) cout<<1<<" "<<n<<endl;
     }else{
-        int gap=1;
-        while(gap<=n){
+        fRR(gap,n){
 
             //zero at starting
             int xr=arr[0];
@@ -32,9 +31,14 @@ void solve(){
                 xr^=arr[j];
             }
             if(xr==0){
-                cout<< 4 << endl;
+                if(gap<n){
+                    cout<< 4 << endl;
                     fr(loop,2)  cout<<1<<" "<<gap<<endl;
                     fr(loop,2)  cout<<gap+1<<" "<<n<<endl;
+                }else{
+                    cout<< 2 << endl;
+                    fr(loop,2)  cout<<1<<" "<<gap<<endl;
+                }
                 return;
             }
             //zero at ending
@@ -55,23 +59,41 @@ void solve(){
                     xr^=arr[j];
                 }
                 // i to i+gap-1 => 0
-                // i+1 to i+gap >> in 1 based indexing
+                // i+1 to i+gap >>> in 1 based indexing
                 if(xr==0){
                     int l,r;
-                    if((i+1)%2==0)  l=i+1;
-                    else            l=i+2;
-                    if((i+gap)%2==)
-                    cout<< 6 << endl;
-                        fr(loop,2)  cout<<1<<" "<<i<<endl;
-                    // if(i+gap+1<n)
-                        fr(loop,2)  cout<<i+1<<" "<<i+gap+1<<endl;
-                    // if(i+gap+2<n)
-                        fr(loop,2)  cout<<i+gap+2<<" "<<n<<endl;
+
+                    if(gap==1){
+                        l=r=i+1;
+                        if ( (l-1)%2 == 0 ){
+                            cout<< 4 << endl;
+                            fr(loop,2)  cout<<1<<" "<<l-1<<endl;
+                            fr(loop,2)  cout<<r+1<<" "<<n<<endl; 
+                            return;
+                        }else{
+                            continue;
+                        }
+                    }
+
+                    if(i%2==0){
+                        l=i+1;
+                    }else{
+                        l= i+2;
+                    }
+                    if((n-i-gap)%2==0){
+                        r=i+gap;
+                    }else{
+                        r=i+gap-1;
+                    }
+
+                    cout<<6 << endl;
+                        fr(loop,2)  cout<<1<<" "<<l-1<<endl;
+                        fr(loop,2)  cout<<l<<" "<<r<<endl;
+                        fr(loop,2)  cout<<r+1<<" "<<n<<endl;
                     return;
                 }
             }
-        
-            gap+=2;
+
         }
     }
 }
