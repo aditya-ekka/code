@@ -1,33 +1,34 @@
-#define fr(i,n) for(int i=0;i<n;i++)
-#define fR(i,n) for(int i=n-1;i>=0;i--)
-#define frr(i,n) for(int i=1;i<=n;i++)
-#define fRR(i,n) for(int i=n;i>=1;i--)
-#define ll long long
-#define yes cout<<"YES\n"
-#define no cout<<"NO\n"
-#define r0 return 0;
-#define r1 return 1;
-#define printv(_v) fr(i,_v.size()){cout<<_v[i]<<" ";}
-#define printvv(_v) fr(i,_v.size()){fr(j,_v[1].size()){cout<<_v[i]}}
-//Eww...macros!
 #include<bits/stdc++.h>
 using namespace std;
+#define ll  long long
+#define yes cout<<"YES\n"
+#define no  cout<<"NO\n"
+#define hr(i,n) for(ll i=n-1; i>=0; i--)
+#define h(i,n)  for(ll i=0; i<=n-1; i++)
+#define H(i,n)  for(ll i=1; i<=n; i++)
+#define hi(i,n) for(ll i=n; i>=1; i--)
+#define vi  vector<int>
+#define vvi vector<vi>
+#define vl  vector<ll>
+#define vvl vector<vl>
+#define pi  pair<int,int>
+#define pl  pair<ll,ll>
+#define pv(v)  h(i,v.size()) {cout<<v[i]<<" ";}
+#define pvv(v) h(i,v.size()) {h(j,v[i].size()){cout<<v[i][j]<<" ";} cout<<endl;}
+#define endl "\n"
+//==================================//
 
-void solve(){
-    ll n,k; ll x;
-    cin>>n>>k; cin>>x;
+void adie(){
+    int n,k;
+    cin>>n>>k;
+    vl v(n);
+    h(i,n) cin>>v[i];
     //
-    if(x<=(((n*(n+1))/2)-(((n-k)*((n-k)+1))/2)) &&
-    x>=(k*(k+1))/2){
-        yes;
-    }else{
-        no;
-    }
+    
 }
 
 int main(){
-    int test;
-    cin>>test;
-    while(test--)   { solve(); }
+    int testcase;   cin>>testcase;
+    while(testcase--)   adie();
     return 0;
 }

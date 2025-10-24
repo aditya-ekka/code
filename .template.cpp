@@ -1,30 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define fr(i,n) for(int i=0;i<n;i++)
-#define fR(i,n) for(int i=n-1;i>=0;i--)
-#define frr(i,n) for(int i=1;i<=n;i++)
-#define fRR(i,n) for(int i=n;i>=1;i--)
 #define ll long long
 #define yes cout<<"YES\n"
-#define no cout<<"NO\n"
-#define r0 return 0
-#define r1 return 1
-#define vi vector<int>
-#define vii vector<vector<int>>
-#define vl vector<long long>
-#define vll vector<long long>
-#define prv(v) fr(i,v.size()){cout<<v[i]<<" ";}
-#define prvv(v) fr(i,v.size()){fr(j,v[i].size()){cout<<v[i][j]}}
+#define no  cout<<"NO\n"
+#define h(i,n)  for(ll i=0; i<=n-1; i++)
+#define H(i,n)  for(ll i=1; i<=n; i++)
+#define hr(i,n) for(ll i=n-1; i>=0; i--)
+#define hi(i,n) for(ll i=n; i>=1; i--)
+#define vi  vector<int>
+#define vvi vector<vi>
+#define vl  vector<ll>
+#define vvl vector<vl>
+#define pi  pair<int,int>
+#define pl  pair<ll,ll>
+#define pv(v)  h(i,v.size()){ cout<<v[i]<<" ";}
+#define pvv(v) h(i,v.size()){ h(j,v[i].size()){cout<<v[i][j]<<" ";} cout<<endl;}
 #define endl "\n"
+#define IM INT_MAX
+#define Im INT_MIN
 //==================================//
 
 void adie(){
     int n;
     cin>>n;
-    ll arr[n];
-    fr(i,n) cin>>arr[i];
+    vi v(n);
+    h(i,n) cin>>v[i];
     //
-
+    
 }
 
 int main(){
