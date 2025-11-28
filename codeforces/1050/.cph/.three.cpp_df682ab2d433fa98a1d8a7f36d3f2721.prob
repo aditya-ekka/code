@@ -1,1 +1,0 @@
-{"name":"Local: three","url":"/home/adie/CODE/codeforces/Sept13/three.cpp","tests":[{"id":1757775018223,"input":"3\n2 4\n2 1\n4 0\n2 7\n1 1\n4 0\n4 9\n1 0\n2 0\n6 1\n9 0\n","output":"2\n7\n6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/CODE/codeforces/Sept13/three.cpp","group":"local","local":true}

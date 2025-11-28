@@ -1,1 +1,0 @@
-{"name":"Local: twoPermutation","url":"/home/adie/code/TLE/800/twoPermutation.cpp","tests":[{"id":1759633840194,"input":"4\n1 1 1\n2 1 2\n3 1 1\n4 1 1\n","output":"Yes\nNo\nNo\nYes\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/code/TLE/800/twoPermutation.cpp","group":"local","local":true}

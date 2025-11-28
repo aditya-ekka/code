@@ -1,1 +1,0 @@
-{"name":"Local: leftanddown","url":"/home/adie/CODE/codeforces/July22/leftanddown.cpp","tests":[{"id":1753197087801,"input":"4\n3 5 15\n2 3 1\n12 18 8\n9 7 5\n","output":"1\n2\n1\n2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/CODE/codeforces/July22/leftanddown.cpp","group":"local","local":true}

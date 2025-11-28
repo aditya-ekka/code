@@ -1,1 +1,0 @@
-{"name":"Local: blackboard","url":"/home/adie/code/codeforces/July01/blackboard.cpp","tests":[{"id":1751380812696,"input":"5\n2\n4\n5\n7\n100\n","output":"Alice\nBob\nAlice\nAlice\nBob\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/code/codeforces/July01/blackboard.cpp","group":"local","local":true}

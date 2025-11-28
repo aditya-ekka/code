@@ -1,1 +1,0 @@
-{"name":"Local: Doremy","url":"/home/adie/CODE/tle_eliminator/Doremy.cpp","tests":[{"id":1755927443867,"input":"5\n2\n8 9\n3\n1 1 2\n4\n1 1 4 5\n5\n2 3 3 3 3\n4\n100000 100000 100000 100000\n","output":"Yes\nYes\nNo\nNo\nYes\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/adie/CODE/tle_eliminator/Doremy.cpp","group":"local","local":true}
