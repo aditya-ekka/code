@@ -107,3 +107,5 @@ System.out.print(tapeUsed);
       scanner.close();
     }
 }
+
+//time limit exceeded

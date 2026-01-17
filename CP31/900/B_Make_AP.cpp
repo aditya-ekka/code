@@ -21,37 +21,35 @@ using namespace std;
 //==================================//
 
 void adie(){
-   string initial, final;
-   cin>>initial;
-   cin>>final;
-//code
-   int i = initial.size();
-   int f = final.size();
+   int a, b, c; 
+   cin >> a >> b >> c;
 
-   int t1 =  0;
-   int t2 =  0;
-
-   while(t1 < i)
+   if ((2*b-c)%a == 0)
    {
-      // cout<<initial[t1] <<" "<<final[t2]<<" :\n";
-      if (t2 != f){
-         if(initial[t1] == final[t2]){
-            t1++ ; t2++ ;
-            continue;
-         }
+      // cout<<1;
+      if ( 2*b-c > 0) {
+         yes;  return;
       }
-      for(int t=0; t<=t2-1; t++){
-         if(initial[t1] == final[t]){
-            t2 = t+1;
-            break;
-         }
-      }
-
-      t1 ++;
    }
 
+   if ((2*b-a)%c == 0)
+   {
+      // cout<<2;
+      if (2*b-a > 0){
+         yes; return;
+      }
+   }
+
+   if (((a+c)/2)%b == 0)
+   {
+      // cout<<3;
+      if ((a+c)%2 == 0){
+         yes; return;
+      }
+   }
    
-   (t1 == i && t2 == f) ? yes : no ; 
+   no;
+//code
    
 }
 
@@ -60,5 +58,3 @@ int main(){
    while(testcase--)   adie();
    return 0;
 }
-
-//I'm getting NO for a case, which is incorrect! COULDN'T UNDERSTAND THE CASE WHAT IT SHOULD BE 

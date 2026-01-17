@@ -87,3 +87,5 @@ tapeUsed += brokenSegment; // here tapeLeft == brokenSegment
 cout << tapeUsed;
 return 0;
 }
+
+//time limit exceeded
