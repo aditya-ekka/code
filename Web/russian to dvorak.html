@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<textarea id="in" rows="10" cols="60"></textarea><br>
+<button onclick="convert()">Convert</button><br>
+<textarea id="out" rows="10" cols="60"></textarea>
+
+<script>
+const ru = "йцукенгшщзхъфывапролджэячсмитьбю";
+const dv = "[],pyfgcrl/=aoeuidhtns-;qjkxbmwvz";
+
+const map = {};
+[...ru].forEach((c,i)=>{
+  map[c] = dv[i];
+  map[c.toUpperCase()] = dv[i].toUpperCase();
+});
+
+function convert(){
+  const text = document.getElementById("in").value;
+  document.getElementById("out").value =
+    [...text].map(c => map[c] || c).join("");
+}
+</script>
+
+</body>
+</html>
