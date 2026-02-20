@@ -24,47 +24,11 @@ void adie(){
    int n, k;
    cin>>n>>k;
 
-   vi v(n);
-   h(i,n){
-      cin >> v[i];
-      v[i] = ((v[i] -1) % k) +1 ;
-   }
-
-   vvi u (max(k,n));
-
-
-
-
-   01
-   h(i,n){
-      u[v[i]].push_back(i + 1);
-   }
-   hr(i, k){
-      h(j, u[i].size()){
-         cout << u[i][j] << " ";
-      }
-   }
-   cout << endl;
+vi v(n);
+h(i,n){
+   cin >> v[i];
+   v[i] = (v[i] -1) % k ;
 }
-
-int main(){
-   int testcase;   cin>>testcase;
-   while(testcase--)   adie();
-   return 0;
-}
-
-/*
-   vector <pair<int,int>> v;
-   H(i,n){
-      int x;
-      cin >> x;
-      v.push_back(make_pair(x,i));
-   }
-//code
-   sort(v.begin(), v.end());
-   //we have to sort repeatdeatly 'causes problem...
-*/
-
 /* brute force ## time limit exceeded
    int m = 0;
    int sum = 0; //array sum
@@ -110,4 +74,33 @@ time limit exceeded
       }
    }
    cout << endl;
+*/
+   vvi u (k);
+   h(i,n){
+      u[v[i]].push_back(i + 1);
+   }
+   H(i, k){
+      h(j, u[i].size()){
+         cout << u[i][j] << " ";
+      }
+   }
+   cout << endl;
+}
+
+int main(){
+   int testcase;   cin>>testcase;
+   while(testcase--)   adie();
+   return 0;
+}
+
+/*
+   vector <pair<int,int>> v;
+   H(i,n){
+      int x;
+      cin >> x;
+      v.push_back(make_pair(x,i));
+   }
+//code
+   sort(v.begin(), v.end());
+   //we have to sort repeatdeatly 'causes problem...
 */
