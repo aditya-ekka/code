@@ -1,0 +1,5 @@
+Write three different C programs—Sender1, Sender2, and Receiver—to demonstrate inter-process communication (IPC) using a message queue.
+
+The program Sender1 should write a message to the queue, and Sender2 should also write a message to the same queue.
+
+The Receiver program should read messages from both senders and display them. Additionally, the receiver should compute and display the length of each received message and the number of vowel characters present in each message.

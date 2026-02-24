@@ -1,0 +1,10 @@
+apple
+banana
+orange
+pineapple
+custarapple
+milk
+grapes
+carrot
+graveyard
+samosa

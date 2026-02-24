@@ -1,0 +1,16 @@
+Basic C (you know) 
+    ↓
+1. Structures - grouping related data
+    ↓
+2. Pointers - accessing memory addresses
+    ↓
+3. Dynamic memory (malloc/calloc) - creating flexible-sized data
+    ↓
+4. Arrays with malloc - dynamic arrays
+    ↓
+5. Linked Lists - connecting nodes
+    ↓
+6. Queue using Linked List - for Round Robin
+    ↓
+7. Putting it all together - the assignment
+

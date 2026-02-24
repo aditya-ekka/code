@@ -1,0 +1,69 @@
+Dept. of CSE, IIT Dhanbad
+Operating Systems Practice
+20/01/2026
+Lab Assignment – 3
+
+1. A parent process creates two child processes C1 and C2.
+Process C2 further creates four child processes C3, C4, C7, and C8.
+Process C3 creates C5, and process C4 creates C6.
+The execution order must satisfy the following constraints:
+1. C5 and C6 execute first, in any order.
+2. After both C5 and C6 complete, processes C3, C4, C7, and C8 execute in any or-
+der.
+3. Only after C3, C4, C7, and C8 have completed, processes C1 and C2 execute in
+any order.
+4. The parent process executes last.
+Write a C program using fork() and wait() to enforce the above execution order.
+For every process created, display its process ID and parent process ID.
+
+2. Write a C program that simulates the FCFS CPU scheduling algorithm using a linked
+list to represent the ready queue.
+The program should satisfy the following requirements:
+1. Each process should be represented as a node in a linked list containing:
+o Process ID (PID)
+o CPU burst time
+2. Processes must be inserted into the ready queue in the order of arrival.
+3. The scheduler should execute processes strictly in FCFS order.
+4. Once a process is executed, its corresponding node must be deleted from the
+linked list (queue).
+5. The program should continue execution until the ready queue becomes empty.
+6. For each process, display:
+o Process ID
+o Burst Time
+o Waiting Time
+o Turnaround Time
+7. Calculate and display:
+o Average Waiting Time
+o Average Turnaround Time
+
+Input
+ Number of processes
+ Id of the process(Integer)
+ arrival time can be same or different
+ Burst time for each process
+Output
+ Execution order of processes
+ Waiting time and turnaround time for each process
+ Average waiting time and average turnaround time
+
+Instructions
+1. Create a folder with your admission number.
+2. Inside it, create another folder named Assignment2.
+3. Write all programs only inside this folder.
+4. To write a program, open the editor using the command:
+gedit Prog1.c &
+ To compile the program, use the command:
+gcc Prog1.c -o Prog1
+ To execute the program, use the command:
+./Prog1
+System calls
+1. #include <unistd.h>
+int fork(void);
+2. #include <sys/wait.h>
+int wait(int *status);
+3. #include <unistd.h>
+int getpid(void);
+int getppid(void);
+4,#include <unistd.h>
+int execlp(const char *file, const char *arg, ...);
+example: execlp(ls, “”, NULL)

@@ -1,0 +1,33 @@
+Write a program that demonstrates inter-process communication (IPC) using shared memory. The program should:
+
+    Create two processes: a parent process and a child process.
+    Either the parent or child process can create the shared memory region.
+    The child process should write at least 10 integer values on the shared memory.
+    The parent process should 
+
+        Read the values from the shared memory.
+
+        Modify each element using a data-dependent and order-dependent logic, where the new value of each element depends on:
+
+            The cumulative sum of all previous elements, and
+
+            The index position of the element.
+
+        Store the modified values back into the shared memory.
+    Check the sample input and accordingly modify the shared data. 
+
+Sample Input
+
+Child Process writing : 1, 5, 11, 18, 24, 35, 47, 53, 62, 78
+
+Parent Process reading:
+
+1, 5, 11, 18, 24, 35, 47, 53, 62, 78
+
+Parent Process modifying:---
+
+Parent Process displaying:
+
+2, 8, 20, 29, 34, 50, 58, 62, 75, 94
+
+Important: Examine various scenarios by commenting out some system calls and provide your analysis as comments directly at the bottom of the code.

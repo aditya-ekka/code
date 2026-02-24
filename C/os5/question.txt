@@ -1,0 +1,42 @@
+question 1
+
+1.     Write a menu-driven C program to generate an array of 100 random elements using rand() in the range 1–255 and use fork() to compute the smallest element. Implement your whole code/cases in a modular manner using functions.
+
+The program should repeatedly display the following menu:
+
+    One child process: Create one child process. The child computes and prints the smallest element of the entire array and terminates. The parent waits and then terminates.
+    Two processes (parent + child): Parent computes the minimum of the first half (elem1) and child computes the minimum of the second half (elem2). The child returns elem2 using exit status. The parent collects it and prints min(elem1, elem2).
+    Three processes (parent + two children): Divide the array into three parts. Each process finds the minimum of its part. Both children return their minima using exit status. The parent collects them, finds the smallest among all three minima, prints it, and terminates.
+    Exit
+
+Note: Every print statement must include the PID and PPID of the process. Use WEXITSTATUS() (as explained in class) to collect the value returned by a child process through its exit status, so that one process can return a computed value to another process.
+
+question 2
+
+1.    Write a C program to create the following process tree using the fork() system call:
+
+ 
+
+             P0
+
+           /      \
+
+         P1       P2 
+
+       /   \           /    \   
+
+     P3     P4    P5   P6
+
+           /             \
+
+         P7              P8
+
+ ·       Create the above process tree exactly using the fork() system call.
+
+·       Execution rule:
+
+·       A parent process must execute only after all its child processes have executed and terminated.
+
+·       Processes at the same level may execute in any order.
+
+·       Each process must print the following after completing its children: PID and PPID

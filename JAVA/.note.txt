@@ -1,0 +1,770 @@
+JAVA is OOPS lang
+   needs { JDK, IDE } to run .java code
+
+# CODE STRUCTURE
+   public class Main{
+      pubilc static void main (String[] args){
+         System.out.println("hii");
+      }
+   }
+
+//COMMENT
+
+/*
+   multi
+   line
+   comment
+*/
+
+# WAYS TO PRINT OUTPUT
+   1. System.out.println(a + " " + b); //sout
+   2. System.out.print(a + " " + b);
+   3. System.out.printf("%.2f",4); //format
+      
+   printf { //format and print
+      method used to format output
+      % [flag] [width] [.precision] [specifier_character]
+      
+      specifier_character {
+         %s, %c, %d, %f, %b
+      }.precision {
+         %.1f to display upto one digit after decimal
+      }flag {
+         +     %+f   output a plus for no. > 0
+         ,     %,f   comma grouping seperator
+         (     %(f   negative numbers are enclosed in ()
+         space % f   display a minus for negative, space for positive
+      }width {
+         %04f     append extra 0 in begining of number if needed to make string width = 4
+         %4f      right justified padding with spaces
+         %-4f     left justified padding with spaces 
+      }
+   }
+
+#  camelCase naming convension
+
+# USER_INPUT
+   import java.util.Scanner;
+   //
+   {
+      Scanner scanner = new Scanner(System.in);
+      int x = scanner.nextInt();
+   }
+
+   scanner.nextInt();
+   scanner.nextDouble;
+   scanner.next(); //doesn't read spaces
+   scanner.nextLine(); //also used to clear cache - before string input & after int input
+   scanner.nextBoolean;
+
+# VARIABLES
+   PRIMITIVE {
+      int, double, char, boolean
+   }
+   REFERENCE {
+      String, array, objectradom
+   }
+
+# ARITHMETIC & LOGICAL OPERATOR
+   - same as cpp
+   - precedence (PEMDAS)
+
+# MATH MODULE
+   Math.PI           *
+   Math.E
+   Math.pow(2,3)
+   Math.abs(-2)
+   Math.sqrt(9)
+   Math.round(3.14)
+   Math.ceil(3.14)
+   Math.floor(3.99)
+   Math.max(10,20)   *
+   Math.min(10,20)   *
+   
+#  if(condition){
+      code1;
+   }else if(condition){
+      code2;
+   }else{
+      code3;
+   }
+
+# TERNARY OPERATOR
+   b = (condition) ? ifTrue : ifFalse ;
+   eg. String PassOrFail = (score >= 60) ? "PASS" : "FAIL" ;
+   
+#  RANDOM MODULE
+   
+   import java.util.Random;
+   //
+   {
+      Random rand = new Random();
+      x = rand.nextInt(1,6);
+   }
+
+   - 1 is inclusive, 6 is exclusive
+   - rand.nextInt(6) equals rand.nextInt(0,6)
+   - if no parameter is passed -> give large random num, generally
+   
+   rand.nextInt();
+   rand.nextDouble();
+   rand.nextBoolean();
+   
+
+## STRING
+   String s = " Aditya Ekka ";
+    int n; char ch; boolean b;
+    n = s.length();
+    ch = s.charAt(3);
+    n = s.indexOf(" "); //parameter = char | string
+    n = s.lastIndexOf('a');
+    s = s.toLowerCase();
+    s = s.toUpperCase();
+    s = s.trim(); //remove begining and ending spaces
+    s = s.replace('A','@');
+    b = s.isEmpty(); 
+    b = s.contains("ity".toUpperCase());
+    b = s.equals("@DITY@ EKK@");
+    b = s.equalsIgnoreCase("@dity@ ekk@");
+    s = s.substring(4,5); //4 inclusive, 5 exclusive
+      //if only one parameter is passed : it's beginIndex
+
+# ENHANCED SWITCH
+   //replacement of many else_if statements
+   
+   /*
+    Switch (day) {
+      case "monday" -> System.out.println("GYM is off today!");
+      case "tuesday", "wednesday", "thursday", "friday" -> System.out.println("It's weekday");
+      case "saturday", "sunday" -> System.out.println("It's weekend");
+      default -> System.out.println("not a day");
+    }
+    */
+
+# for loop
+# while loop
+# do-while loop
+
+# break -> to stop
+# continue -> to skip
+
+=================================================
+
+# VARIABLE SCOPE
+
+   public class Main{
+      static int x = 30;      //class scope
+
+      main(){
+         int x = 10;          //local to main
+         System.out.println(anotherFunction());
+         System.out.println(x);
+      }
+
+      public static int anotherFunction()
+      {
+         int x = 20;          //local to main
+         return x;
+      }
+   }
+
+   -> local varaible is preffered over class variables
+
+
+
+# METHOD 
+   reusable block of code; used when called ()
+
+   -> a static method can only call other method 
+      (or, variable)   if it's static too
+
+# OVERLOADED METHOD
+   methods that share same name, but have different parameter
+
+   -> signature = name + parameter
+      should be different
+
+# VARIABLE ARGUMENTS
+   static double add (int... numbers)
+   {
+      int sum = 0;
+      for( int number: numbers) {   //advanced for-loop
+         sum += number;
+      }
+      return sum;
+   }
+
+   -> ... is called 'ellipses'
+   -> all parameters are stored in an array
+         int[] numbers
+   -> vargrs should be placed at last only
+   
+
+==================================================
+
+# OBJECT
+   a reference data type like String, array
+   -> an entity that holds
+      - attributes (data)
+      - methods (can do something)
+
+   -> 'this' keyword refers to the object
+         we're currently working with
+
+# CONSTRUCTOR
+
+   public class Person        //'class' keyword
+   {
+      String name;
+      int age;
+
+      static int population;  //'static' keyword
+
+      Person (String name)    //constructor 
+      {
+         this.name = name;    //'this' keyword
+         this.age = 0;
+         population++ ;       
+      }
+
+   }
+
+# OVERLOADED CONSTRUCTOR
+   can have same name, but parameter should differ
+
+# ARRAY OF OBJECTS
+
+   public static void main (String[] args)
+   {
+      Person person1 = new Person("Tom");
+      Person person2 = new Person("Jerry");
+
+      Person[] people = {person1, person2};
+      
+      //or
+      Person[] people = {new Person("Tom"), new Person("Jerry")};
+   }
+
+# STATIC keyword
+   makes variable/method belong to class rather than any specific object
+   -> commonly used for 
+      - utility method : (eg. Math.PI) can be accessed without creating any object
+      - shared resources : (eg. Person.population)
+
+   person1.population (bad way)
+   people.population  (good way)
+
+
+==================================================
+
+# INHERITANCE
+
+   public class Student extends Person    //'extends' keyword
+   {
+      double gpa;
+
+      Student (double gpa, String name)
+      {
+         this.gpa = gpa;
+         super(name);                     //'super' keyword
+      }
+   }
+
+        child   <---    parent
+       subclass       superclass
+   eg, Student          Person
+
+# METHOD OVERRIDING
+   subclass can modify superclass's method for itself
+
+# ABSTRACTION-extends
+   is process of hiding implementaition details and showing only the essential feautures
+
+   -> used to define abstract class and methods
+   -> abstract class can't be instantiated directly (no object)
+   -> can contain 
+      - 'ABSTRACT' methods (must be implemented)
+      - 'CONCRETE' methods (which are inherited, as usual)
+   
+   public abstract class Shape      //'abstract' class
+   //can't create any object of the class, directly 
+   {
+      abstract double area();       //'abstract' method
+      //must have to implement in all subclasses
+
+      //if fn is not mentioned abstarct, it's concrete
+   }
+
+   public class Circle extends Shape
+   {
+      @Override                    //annotation
+      double area ()
+      {
+         //code
+      }
+   }
+
+   // triangle class
+   // rectangle class
+   // but random shapes are not allowed, we're could create only generic shape object 
+
+# INTERFACE-implements
+   // multiple inheritance like behaviour
+   // i.e., can have multiple parents of same child 
+
+   -> specifies a set of abstract methods that implementing classes MUST define (similar to ABSTRACTION)
+
+   public interface Prey      //'interface' keyword 
+   {
+      void flee();
+   }
+   public interface Predator
+   {
+      void hunt();
+   }
+
+   public class Rabbit implements Prey
+   {
+      //@Override
+   }
+   public class Hawk implements Predator
+   {
+      //@Override
+   }
+   public class Fish impleents Prey, Predator   //
+   {
+      @Override
+      public void flee()
+      {
+         sout("fish is swimming away");
+      }
+      @Override
+      public void hunt()
+      {
+         sout("Fish is hunting");
+      }
+   }
+
+ABSTRACT & INTERFACE overlaps and can be used alternatively many times
+   -> interface extra feauture of multi-inheritance
+   -> interface - implements
+   -> abstract - extends
+
+
+==================================================
+
+# POLYMORPHISM
+   objects can be treated as object of superclass
+
+         O r g a n i s m
+            !        !
+         Plant    Animal
+                  !    !
+                 Cat  Dog
+
+   creating plant object;
+      Organism plant; (correct)
+      Plant plant;   (correct)
+   lly,
+      Cat cat; (correct)
+      Animal cat; (correct)
+      Organism cat;  (correct)
+      Plant cat; (incorrect)
+
+   ,,
+   Cat cat = new Cat();
+   // dog 
+   Animal[] animals = {cat, dog} ;
+
+# RUNTIME POLYMORPHISM 
+   when the method that get executed is decided
+   at runtime based on the actual type of object
+
+# GETTER : methods that make a field readable
+  SETTER : methods that make a field writeable
+
+  -> define methods to get/set private variable 
+  (similar to cpp)
+
+   they help protect object data and add rules for accessing or modifying them
+
+   access modifiers : public, PRIVATE
+
+# AGGREGATION "has-a"
+   one object (eg, library) contains another object
+   (eg, books array of book object) as part of its structure 
+      but, the contained objects can EXIST INDEPENDENTLY
+   
+   public class Book
+   {
+      String title;
+      int page;
+      Book (String title, int pages){...}
+      String displayInfo() {return this.title + " " + this.page};
+   }
+   main()
+   {
+      Book book1 = new Book(...);
+      ...
+      Book[] books = {book1, book2, book3};
+   }
+   public class Library
+   {
+      String name;
+      int year;
+      Book[] books;
+   }
+
+   if we delete Library class, still Book exist!
+
+# COMPOSITION "part-of"
+   where both classes exists together;
+   complex classes can be constructed from smaller objects
+
+   public class Car
+   {
+      String model;
+      int year;
+      Engine engine;
+      Car (String model, int year, String engineType)
+      {
+         this.model = medel;
+         this.year = year;
+         this.engine = new Engine (engineType); //composition 
+      }
+      
+   }
+   public class Engine
+   {
+      String type;
+      Engine (String type)
+      {
+         this.type = type;
+      }
+   }
+   main()
+   {
+      sout (car.model);
+      sout (car.year);
+      sout (car.engine.type);
+   }
+
+
+==================================================
+
+# WRAPPER class
+   allows primitive values (int, char, boolean, double)
+   to be used as objects
+   "wrap 'em into object"
+   generally, we don't wrap primitives unless we need an object.
+
+   allows use of Collection Framework and
+                 Static Utility Methods
+
+   AUTOBOXING            
+      Integer a = 134;
+      Double b = Math.PI;
+      Character c = 'A';
+      Boolean d = true;
+   these are Reference-Data-Type
+
+   UNBOXING
+      int x = a;
+
+   usage :-
+   1. to convert int, char, boolean to String
+      String a = Integer.toString(135);
+      String b = Character.toString('@');
+      String c = Boolean.toString(true);
+   
+   2. to convert String to int, double, boolean (not char)
+      int a = Integer.parseInt("145");
+      double b = Double.parseDouble("3.1");
+      boolean c = Boolean.parseBoolean("true");
+
+      char c = "Pizza".charAt(0);
+
+   3. char letter = 'A';
+      boolean b = Character.isLetter(letter);
+      boolean c = Character.isUpperCase(letter);
+
+   
+# ARRAYLIST
+   a resizable array that stores objects (autoboxing)
+   Arrays are fixed in size, but ArrayList can be changed.
+
+   import java.util.ArrayList;
+   main ()
+   {
+      ArrayList list = new ArrayList();
+      or, better specify using diamond operator
+      ArrayList<Integer> list = new ArrayList<>();
+
+      list.add(3);
+      list.add(4);
+      sout(list);
+      list.remove(0); //index as parameter
+      list.set(1,69); //replace element at index 0 with 69
+      sout(list.get(2));
+      list.size();
+
+      import java.util.Collections;
+      Collections.sort(list);
+
+      for (number: list){
+         sout(number);
+      }
+   }
+
+
+==================================================
+
+# EXCEPTION
+   try(what autocloses at finally){
+      //
+   }catch(ExceptionName e){
+      //
+   }finally{
+      //this always executes
+   }
+
+==================================================
+
+Main.java
+(C) class
+(I) interface
+(R) record
+(E) enum
+ @  annotation
+...   exception
+
+==================================================
+
+# FILE_HANDLING
+
+# HOW TO WRITE A FILE?
+   1. FileWriter
+      good for small or medium-sized text files
+   2. BufferedWriter
+      better performance for large amount of text
+   3. PrintWriter
+      best for structured data, like reports or logs
+   4. FileOutputStream
+      best for binary files (eg, images, audio files)
+   
+1. import java.io.FileWriter
+   {
+      try {
+         String filepath = "/home/adie/Desktop/testfile.txt";
+         FileWriter writer = new FileWriter(filepath);
+         String str = """
+         write this
+         """;
+         writer.write(str);
+         System.out.println("okay");
+      } catch (FileNotFoundException e) {                //
+         System.out.println("File Not Found!");
+      } catch (IOException e) {                          //
+         System.out.println("Something went wrong");
+      } finally {
+         System.out.println("File has been written!");
+         // writer.close();
+      }
+   }
+
+
+# HOW TO READ A FILE?
+   1. BufferedReader + FileReader
+      best for reading text files line by line
+   2. FileInputStream
+      best for binary files (eg, images, audio files)
+   3. RandomAccessFile
+      best for read/write specific portion of large file 
+
+   import java.io.BufferedReader;
+   import java.io.FileReader;
+      try (BufferedReader reader = new BufferedReader(
+                                   new FileReader(filepath)
+                                   ))
+      {
+            String line;
+            while((line = reader.readLine()) != null) {
+               System.out.println(line);
+            }
+      }catch..
+
+
+## Audio File 
+
+{
+   import javax.sound.sampled.AudioInputStream;
+   import javax.sound.sampled.AudioSystem;
+   import javax.sound.sampled.Clip;
+
+   can't handle mp3 file (need other module)
+   let's play audio (.wav, .au, .aiff)
+
+   String filepath = "";
+   File file = new File (filepath);
+
+   try (
+      AudioInputStream audiostream = AudioSystem.getAudioInputStream(file);
+   ){
+      Clip clip = AudioSystem.getClip();
+      clip.open(audiostream);
+   }catch (FileNotFoundException e){
+      System.out.println("File not found");
+   }
+}
+
+
+==================================================
+
+## Date and Time
+
+{
+   LocalTime time = LocalTime.now();
+   LocalDate date = LocalDate.now();
+   LocalDateTime dateTime = LocalDateTime.now();
+
+   Instant instant = Instant.now();
+   
+   System.out.println(time);
+   System.out.println(date);
+   System.out.println(dateTime);
+   System.out.println(instant);
+   System.out.println(  );
+
+   //date-time formatting
+   DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+      "HH:mm:ss a dd-MM-yyyy"
+      );
+   String text = dateTime.format(formatter);
+   
+   System.out.println(text);
+   System.out.println();
+
+   //
+   LocalDate dateOf = LocalDate.of(2012,4,3);
+   LocalTime timeOf = LocalTime.of(5,59,51);
+   LocalDateTime dateTimeOf = LocalDateTime.of(dateOf, timeOf);
+
+   System.out.println(dateOf);
+   System.out.println(timeOf);
+   System.out.println(dateTimeOf);
+   System.out.println();
+
+   //isAfter, isBefore, isEqual
+   System.out.println(dateTimeOf.isBefore(dateTime)); 
+}
+
+
+## ANONYMOUS CLASS
+   a class that doesn't have a name. Cannot be reused.
+   add custom behaviour without having to create a new class.
+   often used for one time uses (eg, TimerTask, Runnable, Callbacks)
+
+   //if Dog is a predefined class
+   Dog strangDog = new Dog () {
+      @Override
+      void speak{
+         sout("Am I strange, Mf?");
+      }
+   }
+
+
+## TIMER and TimerTask
+
+   Timer : class that schedules task at specific times or periodically
+      used for- sending notifications, scheduled updates, repetive actions
+
+   TimerTask : represents the task that will be executed by the Timer
+      we will extend the TimerTask class to define our task
+      (create a subclass of TimerTask and @Override run() function)
+
+   Timer timer = new Timer();
+   TimerTask task = new TimerTask(){
+      @Override
+      public void run() {
+
+         while(true){
+            LocalTime time = LocalTime.now();
+            if (time.equals(LocalTime.of(12,8,0))){
+               System.out.println("Happy New Year");
+               return;
+            }
+            System.out.println(time);
+         }
+
+      }
+   };
+   timer.schedule(task, 2000,(int)(Math.PI));
+
+
+==================================================
+
+## GENERICS
+   a concept where u can write a class, interface or methods that is compatible with different data type
+   - <T> type parameter (placeholder that gets replaced with )
+   - <String> type argument (specifies the type, when calling)
+
+   static public class Box<T> {
+      T item;
+
+      public void setItem(T item) {
+         this.item= item;
+      }
+      
+      public T getItem() {
+         return item;
+      }
+
+   }
+
+
+==================================================
+
+## HASH MAP
+   a data str that stores key-value pair 
+   keys are unique, but values can be duplicated 
+   doesn't maintain any order, but is memorey efficent
+   
+   import java.util.HashMap;
+   {
+      HashMap <String, Double> map = new HashMap<>(); //declaration
+
+      map.put ("apple", 5.0);
+      map.put ("orange" , 42.4);
+      map.put ("banana", 24.4);
+
+      map.put("orange", 12.2);
+      //can have same key, but with different value;
+      //this overwrites previous value
+
+      System.out.println(map);
+      //{orange=12.2, banana=24.4, apple=5.0}
+      
+      map.remove("apple");
+      System.out.println(map.get("orange")); //value
+      System.out.println(map.containsKey("banana"));
+      System.out.println(map.containsValue(5.0));
+      // don't use 5 instead of 5.0
+      System.out.println(map.size());
+
+      System.out.println(map.keySet());
+
+
+      for (String key: map.keySet()) {
+         System.out.print(key + " ");
+      }
+   }
+
+
+==================================================
+
+## ENUMERATION
+   a special kind of class that represents a fixed set of constants.
+   - code readability and are easy to maintain
+   - more efficient with switches when comparing Strings 
+
+   
