@@ -1,0 +1,26 @@
+# is commentline
+program runs line by line
+; is used to execute multiple cmd in single line
+
+#! (shebang) follwed by path (/bin/bash) is first line of code to tell which interpreter to use
+
+#VARIABLES
+
+variableName=value
+no space around =
+$variableName to access the variable
+
+SYSTEM VARIABLE
+eg, $PATH
+
+LOCAL VARIABLE vs GLOBAL VARIABLE
+myFunctiom() {
+ localVar=67
+ echo "$localVar"
+}
+
+VARIABLE OPERATION
+-concatenation
+-arithmetic
+
+
