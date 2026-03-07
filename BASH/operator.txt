@@ -1,0 +1,25 @@
+BASH OPERATOR
+-comparision
+-string
+-arithmetic
+-logical
+-file test operator
+
+COMPARISON OP
+-eq -ne -lt -le -gt -ge
+
+STRING COMPARISON OP
+=	!=	<	>
+
+ARITHMETIC OP
++	-	*	/	%
+for expomentiation use bc, awk
+
+LOGICAL OP
+&&	||	!
+
+FILE TEST OP
+-e file exists
+-d directory exists
+-f is file regular
+-s is file not empty

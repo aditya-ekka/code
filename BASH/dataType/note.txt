@@ -1,0 +1,3 @@
+DATA TYPE LIMITATION
+bash doesnot support floating point arithmetic natively.
+use bc or awk.
