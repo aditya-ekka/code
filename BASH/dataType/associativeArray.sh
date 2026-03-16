@@ -8,12 +8,6 @@ colors[banana]="yellow"
 colors[grapes]="green"
 colors[orange]="orange"
 
-#for color in colors
-#do
-#	echo "$color"
-#done
+unset colors[banana]
+echo "${colors[apple]}"
 
-num=90
-echo "$num"
-
-#declare not found err
