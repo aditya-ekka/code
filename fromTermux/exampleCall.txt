@@ -1,0 +1,9 @@
+SELECT calculator(10,5,'+');
+
+SELECT sum_avg_positive('[5,-3,10,-1,2]');
+
+SELECT get_grade(82);
+
+SELECT second_max('[10,20,15,25,18]');
+
+SELECT count_even_above_avg('[4,8,10,3,5]');
