@@ -1,0 +1,32 @@
+HTML to define the content of web pages
+CSS to specify the layout of web pages
+JAVASCRIPT to program the behaviour of web pages
+
+# WHY JAVASCRIPT
+
+getElementById();
+
+can change html content
+document.getElementById('demo').innerHTML = 'Hello JavaScript';
+
+can change html attribute values
+
+can change html styles (css)
+document.getElementById("demo").style.fontSize = "35px";
+
+can hide htmml elements
+document.getElementById("demo").style.display = "none";
+
+can show html document
+document.getElementById("demo").style.display="block";
+
+########################
+
+# WHERE TO INTEGRATE
+<head> or <body> wherever
+
+<script>
+document.getElementById("demo").innerHTML = "My first javascript";
+</script>
+
+FUNCTION AND EVENTs
