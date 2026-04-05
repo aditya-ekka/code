@@ -29,4 +29,12 @@ document.getElementById("demo").style.display="block";
 document.getElementById("demo").innerHTML = "My first javascript";
 </script>
 
-FUNCTION AND EVENTs
+FUNCTION AND EVENTs ?idk
+
+# JAVASCRIPT OUTPUT
+
+can display data through writing into :
+* HTML element : innerHTML or innerText
+* HTML output : document.write()
+* alert box : window.alert()
+* browser console : console.log()

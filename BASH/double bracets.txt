@@ -1,0 +1,19 @@
+WHERE TO USE ((  )) and $((  ))
+
+1. ${ } for variable expansion and clarity
+
+name="adie"
+echo ${name}123
+
+2. ${ } is required for array
+
+arr=("a" "b" "c")
+echo ${arr[0]}
+echo ${arr[@]}
+
+3. $( ) runs a cmd and inserts its output
+
+today=$(date)
+echo $today
+
+4. 

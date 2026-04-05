@@ -23,31 +23,20 @@ using namespace std;
 void adie(){
    int n;
    cin>>n;
-   vi v(n);
-   h(i,n) cin>>v[i];
+   string s;
+   cin>>s;
 //code
-   for (int j=1; j<n-1; j++)
-   {
-      // bool l=false, r=false;
-      for (int i=0; i<j; i++)
-      {
-         if(v[i]<v[j])
-         {
-            for(int k=j+1; k<n; k++)
-            {
-               if(v[j]>v[k])
-               {
-                  yes;
-                  cout<<i+1<<" "<<j+1<<" "<<k+1<<endl;
-                  return;
-               }
-            }
-            break;
-         }
-      }
+   int maximum=0;
+   int idx=0;
+   h(i,n){
+      if (idx==0 && s[i]=='L') continue;
+      else if(s[i]=='L') idx--;
+      else idx++;
+      maximum=max(maximum, idx);
    }
+   cout<<maximum+1<<endl;
 
-   no;
+   
 }
 
 int main(){

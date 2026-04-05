@@ -26,28 +26,13 @@ void adie(){
    vi v(n);
    h(i,n) cin>>v[i];
 //code
-   for (int j=1; j<n-1; j++)
+   int ans=0;
+   while(v.size()>0)
    {
-      // bool l=false, r=false;
-      for (int i=0; i<j; i++)
-      {
-         if(v[i]<v[j])
-         {
-            for(int k=j+1; k<n; k++)
-            {
-               if(v[j]>v[k])
-               {
-                  yes;
-                  cout<<i+1<<" "<<j+1<<" "<<k+1<<endl;
-                  return;
-               }
-            }
-            break;
-         }
-      }
+      int mx=0;
+      
    }
-
-   no;
+   cout<<ans<<endl;
 }
 
 int main(){
