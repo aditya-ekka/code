@@ -62,7 +62,7 @@ JAVA is OOPS lang
       int, double, char, boolean
    }
    REFERENCE {
-      String, array, objectradom
+      String, array, object
    }
 
 # ARITHMETIC & LOGICAL OPERATOR
@@ -122,7 +122,7 @@ JAVA is OOPS lang
     s = s.toUpperCase();
     s = s.trim(); //remove begining and ending spaces
     s = s.replace('A','@');
-    b = s.isEmpty(); 
+    b = s.isEmpty();
     b = s.contains("ity".toUpperCase());
     b = s.equals("@DITY@ EKK@");
     b = s.equalsIgnoreCase("@dity@ ekk@");
@@ -163,16 +163,14 @@ JAVA is OOPS lang
 
       public static int anotherFunction()
       {
-         int x = 20;          //local to main
+         int x = 20;          //local to anotherFunction
          return x;
       }
    }
 
    -> local varaible is preffered over class variables
 
-
-
-# METHOD 
+# METHOD
    reusable block of code; used when called ()
 
    -> a static method can only call other method 
@@ -226,7 +224,6 @@ JAVA is OOPS lang
          this.age = 0;
          population++ ;       
       }
-
    }
 
 # OVERLOADED CONSTRUCTOR
@@ -273,7 +270,7 @@ JAVA is OOPS lang
         child   <---    parent
        subclass       superclass
    eg, Student          Person
-
+-
 # METHOD OVERRIDING
    subclass can modify superclass's method for itself
 
@@ -306,7 +303,7 @@ JAVA is OOPS lang
 
    // triangle class
    // rectangle class
-   // but random shapes are not allowed, we're could create only generic shape object 
+   // but random shapes are not allowed, we're could create only generic shape object
 
 # INTERFACE-implements
    // multiple inheritance like behaviour
@@ -718,7 +715,6 @@ Main.java
       public T getItem() {
          return item;
       }
-
    }
 
 
@@ -765,6 +761,5 @@ Main.java
 ## ENUMERATION
    a special kind of class that represents a fixed set of constants.
    - code readability and are easy to maintain
-   - more efficient with switches when comparing Strings 
-
+   - more efficient with switches when comparing Strings
    

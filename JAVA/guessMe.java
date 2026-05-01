@@ -1,4 +1,4 @@
-package JAVA;
+// package JAVA;
 // package guess me (game);
 import java.util.Scanner;
 import java.util.Random;

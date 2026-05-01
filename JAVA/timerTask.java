@@ -13,7 +13,7 @@ public class timerTask {
 
             while(true){
                LocalTime time = LocalTime.now();
-               if (time.equals(LocalTime.of(12,8,0))){
+               if (time.equals(LocalTime.of(10,6,0))){
                   System.out.println("Happy New Year");
                   return;
                }
