@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+   <script src="myScript.js"></script> <!-- external script -->
+</head>
 <body>
    <p id="demo">Nice to meet'cha</p>
    <button type="button" onclick="myFunction()">Try it</button>
-
+   
+   <!-- internal script -->
    <script>
       function myFunction() {
          document.getElementById("demo").innerHTML = "Hello JavaScript!";
       }
    </script>
-   
+   <script src="myScript2.js"></script> 
+   <!-- this is preferred -->
 </body>
 </html>
